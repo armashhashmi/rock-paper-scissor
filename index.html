@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <div class="container-top">
+          <div class="container-top-left font-7 font-40 white">
+            <p>ROCK</p>
+            <p>PAPER</p>
+            <p>SCISSORS</p>
+          </div>
+          <div class="container-top-right">
+            <div class="your-score font-7 font-17 black">YOUR <br />SCORE</div>
+            <div class="score font-7 font-68 black">15</div>
+          </div>
+        </div>
+        <div class="container-bottom">
+          <hr id="first" />
+          <hr id="second" />
+          <hr id="third" />
+
+          <!-- <hr id="first" />
+          <hr id="first" /> -->
+          <div class="container-bottom-top">
+            <div class="scissor">
+              <img src="/images/scissor.png" alt="" />
+            </div>
+            <div class="rock">
+              <img src="/images/rock.png" alt="" />
+            </div>
+          </div>
+          <div class="container-bottom-bottom">
+            <div class="paper">
+              <img src="/images/paper.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="container-bottom-secondry disable">
+          <div class="scissor-secondry-box">
+            <p class="scissor-secondry-text font-17 white font-5">YOU PICKED</p>
+            <div class="scissor-secondry">
+              <img src="/images/scissor.png" alt="" />
+            </div>
+          </div>
+          <div class="message">
+            <p class="message-text white font-40 font-7" style="z-index: 100">
+              YOU WIN <br /><span class="font-21 div">AGAINST PC</span>
+            </p>
+            <button class="play-again-btn">PLAY AGAIN</button>
+          </div>
+          <div class="paper-secondry-box">
+            <p
+              class="paper-secondry-text font-17 font-5 white"
+              style="z-index: 100"
+            >
+              PC PICKED
+            </p>
+            <div class="paper-secondry ripple">
+              <img src="/images/paper.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <button class="try-again-btn disable">TRY AGAIN</button>
+      </div>
+
+      <button class="rules-btn">RULES</button>
+
+      <div class="rules white disable">
+        <div class="rules-top">
+          <p class="font-5 font-29">Game Rules</p>
+          <button class="cross-btn">&times;</button>
+        </div>
+
+        <ul class="font-13 font-4">
+          <li class="yellow">
+            <span class="white">
+              Rock beats scissors, scissors beat paper, and paper beats
+              rock.</span
+            >
+          </li>
+          <li class="yellow">
+            <span class="white"
+              >Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”</span
+            >
+          </li>
+          <li class="yellow">
+            <span class="white">
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time
+            </span>
+          </li>
+          <li class="yellow">
+            <span class="white">
+              If both players lay down the same hand, each player lays down
+              another hand</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
