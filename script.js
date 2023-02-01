@@ -9,20 +9,25 @@ crossBtn.addEventListener("click", () => {
   document.querySelector(".rules").classList.toggle("disable");
 });
 
-// MAKING THE TRY AGAIN BTN :-
-document.querySelector(".try-again-btn").addEventListener("click", () => {
-  document.querySelector(".try-again-btn").classList.toggle("disable");
-  document.querySelector(".try-again-btn").classList.toggle("blink");
-});
+// tryAgain function:
 
-// MAKING THE PLAY AGAIN BTN:-
-// document.querySelector(".play-again-btn").addEventListener("click", () => {
-//   document
-//     .querySelector(".container-bottom-secondry")
-//     .classList.toggle("disable");
+function tryAgain() {
+  document.querySelector(".try-again-btn").classList.add("disable");
+  document.querySelector(".try-again-btn").classList.remove("blink");
+  document.querySelector(".scissor").classList.remove("no-click");
+  document.querySelector(".rock").classList.remove("no-click");
+  document.querySelector(".paper").classList.remove("no-click");
+}
 
-//   document.querySelector(".container-bottom").classList.toggle("disable");
-// });
+// playAgain function:-
+
+function playAgain() {
+  document
+    .querySelector(".container-bottom-secondry")
+    .classList.toggle("disable");
+
+  document.querySelector(".container-bottom").classList.toggle("disable");
+}
 
 // MAKING THE GAME WORK:-
 
@@ -37,7 +42,7 @@ let arr = ["rock", "paper", "scissor"];
 
 scissorBtn.addEventListener("click", () => {
   let randomIndex = Math.floor(Math.random() * arr.length);
-  console.log(arr[randomIndex]);
+
   if (arr[randomIndex] === "paper") {
     score += 1;
     scoreBoard.innerHTML = score;
@@ -114,28 +119,18 @@ scissorBtn.addEventListener("click", () => {
 
   // PLAY AGAIN BTN
 
-  document.querySelector(".play-again-btn").addEventListener("click", () => {
-    document
-      .querySelector(".container-bottom-secondry")
-      .classList.toggle("disable");
-
-    document.querySelector(".container-bottom").classList.toggle("disable");
-  });
+  document
+    .querySelector(".play-again-btn")
+    .addEventListener("click", playAgain);
 
   //   TRY AGAIN BTN
 
-  document.querySelector(".try-again-btn").addEventListener("click", () => {
-    document.querySelector(".try-again-btn").classList.add("disable");
-    document.querySelector(".try-again-btn").classList.remove("blink");
-    document.querySelector(".scissor").classList.remove("no-click");
-    document.querySelector(".rock").classList.remove("no-click");
-    document.querySelector(".paper").classList.remove("no-click");
-  });
+  document.querySelector(".try-again-btn").addEventListener("click", tryAgain);
 });
 
 rockBtn.addEventListener("click", () => {
   let randomIndex = Math.floor(Math.random() * arr.length);
-  console.log(arr[randomIndex]);
+
   if (arr[randomIndex] === "scissor") {
     score += 1;
     scoreBoard.innerHTML = score;
@@ -212,28 +207,18 @@ rockBtn.addEventListener("click", () => {
 
   // PLAY AGAIN BTN
 
-  document.querySelector(".play-again-btn").addEventListener("click", () => {
-    document
-      .querySelector(".container-bottom-secondry")
-      .classList.toggle("disable");
-
-    document.querySelector(".container-bottom").classList.toggle("disable");
-  });
+  document
+    .querySelector(".play-again-btn")
+    .addEventListener("click", playAgain);
 
   //   TRY AGAIN BTN
 
-  document.querySelector(".try-again-btn").addEventListener("click", () => {
-    document.querySelector(".try-again-btn").classList.add("disable");
-    document.querySelector(".try-again-btn").classList.remove("blink");
-    document.querySelector(".scissor").classList.remove("no-click");
-    document.querySelector(".rock").classList.remove("no-click");
-    document.querySelector(".paper").classList.remove("no-click");
-  });
+  document.querySelector(".try-again-btn").addEventListener("click", tryAgain);
 });
 
 paperBtn.addEventListener("click", () => {
   let randomIndex = Math.floor(Math.random() * arr.length);
-  console.log(arr[randomIndex]);
+
   if (arr[randomIndex] === "rock") {
     score += 1;
     scoreBoard.innerHTML = score;
@@ -310,21 +295,11 @@ paperBtn.addEventListener("click", () => {
 
   // PLAY AGAIN BTN
 
-  document.querySelector(".play-again-btn").addEventListener("click", () => {
-    document
-      .querySelector(".container-bottom-secondry")
-      .classList.toggle("disable");
-
-    document.querySelector(".container-bottom").classList.toggle("disable");
-  });
+  document
+    .querySelector(".play-again-btn")
+    .addEventListener("click", playAgain);
 
   //   TRY AGAIN BTN
 
-  document.querySelector(".try-again-btn").addEventListener("click", () => {
-    document.querySelector(".try-again-btn").classList.add("disable");
-    document.querySelector(".try-again-btn").classList.remove("blink");
-    document.querySelector(".scissor").classList.remove("no-click");
-    document.querySelector(".rock").classList.remove("no-click");
-    document.querySelector(".paper").classList.remove("no-click");
-  });
+  document.querySelector(".try-again-btn").addEventListener("click", tryAgain);
 });
